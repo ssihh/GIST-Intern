@@ -29,3 +29,26 @@ if __name__ == "__main__":
         thread.join()
 
     print("--- elapsed time %s seconds ---" % (time.time() - start_time))
+
+
+import time
+import shutil #셸 유티리티
+import threading
+import os
+
+#파일복사
+path = './dsttest/'
+
+def copy_test():
+    file_list = os.listdir(path)
+    file_list_log = [file for file in file_list if file.startswith("o")]
+    c = len(file_list_log)
+    shutil.copy('./dsttest/out.png', './dsttest/out{0}.png'.format(c))
+
+if __name__ == "__main__":
+    start_time = time.time()
+    for i in range(3):
+        copy_test()
+        print("dmd")
+
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
