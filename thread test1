@@ -1,0 +1,26 @@
+import time
+import shutil #셸 유티리티
+import threading
+
+#파일복사
+
+
+src1 = './dsttest/out.png'
+file_list_log = [file for file in src1 if file.startswith("logfile")]
+count=1+len(file_list_log)
+
+def copy_test(src):
+    shutil.copy(src, './dsttest/out{0}.png'.format(count)) #파일의 내용과 파일의 권한만 복사
+
+works = [x for x in range(9)]
+thread_count = 3
+threads = []
+
+if __name__ == "__main__":
+    start_time = time.time()
+    for i in range(thread_count):
+        thread = threading.Thread(target=copy_test(src1), args=(works[i*3: (i+1)*3],), )
+        thread.start()
+        threads.append(thread)
+
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
