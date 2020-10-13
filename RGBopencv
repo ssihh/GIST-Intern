@@ -1,0 +1,58 @@
+###############################################
+##      Open CV and Numpy integration        ##
+###############################################
+
+import pyrealsense2 as rs
+import numpy as np
+import cv2
+
+# Configure depth and color streams
+pipeline = rs.pipeline() #파이프 라인은 장치 및 컴퓨터 비전 처리 모듈과의 사용자 상호 작용을 단순화합니다.
+config = rs.config() #파이프 라인 사용자는 파이프 라인 스트림과 장치 선택 및 구성에 대한 필터를 요청할 수 있습니다.
+config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
+config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
+
+# Start streaming
+pipeline.start(config)
+
+try:
+    while True:
+        # Wait for a coherent pair of frames: depth and color
+        # 일관된 프레임 쌍을 기다립니다 : 깊이와 색상
+        frames = pipeline.wait_for_frames()
+        depth_frame = frames.get_depth_frame()
+        color_frame = frames.get_color_frame()
+        if not depth_frame or not color_frame:
+            continue #현재 루프 실행을 종료하고 반복문의 처음으로 돌아가 코드를 실행
+
+        # Convert images to numpy arrays 이미지를 numpy 배열로 변환
+        depth_image = np.asanyarray(depth_frame.get_data())
+        color_image = np.asanyarray(color_frame.get_data())
+
+        # Apply colormap on depth image (image must be converted to 8-bit per pixel first)
+        # 깊이 이미지에 컬러 맵 적용 (먼저 이미지를 픽셀 당 8 비트로 변환해야 함)
+        depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_BONE)
+
+        b, g, r = cv2.split(color_image)
+
+        rgb_images = np.hstack((r, g, b))
+        cv2.imshow('R_G_B', rgb_images)
+
+        # Stack both images horizontally
+        images = np.hstack((color_image, depth_colormap))
+
+        # Show images
+        cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
+        cv2.imshow('RealSense', images) #창 띄우기~
+        key = cv2.waitKey(1) #입력키를 받아서 명령실행
+        if key == ord("s"):
+            cv2.imwrite('./out.png', images)
+            print("Capture")
+        if key in (27, ord("q")):
+            print("Pause")
+            break
+
+finally:
+    # Stop streaming
+    pipeline.stop()
+    cv2.destroyAllWindows()
