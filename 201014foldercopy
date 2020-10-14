@@ -4,7 +4,9 @@ import threading
 import os
 
 # 파일복사
-path = './'
+path = './test7GB/'
+files = os.listdir(path) #listdir() 해당 경로의 파일을 리스트로 반환
+
 
 def copy_test(partial_works):  # 복사
     for w in partial_works:
@@ -18,8 +20,8 @@ thread_count = 10
 threads = []
 
 if __name__ == "__main__":
-    print('start !')
     start_time = time.time()
-    copy_test(range(1))
+    #copy_test(range(1))
+    print('상위 5개 파일 출력 : ', files[0:5]) #파일리스트 출력
 
     print("--- elapsed time %s seconds ---" % (time.time() - start_time))
