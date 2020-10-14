@@ -1,0 +1,25 @@
+import time
+import shutil  # 셸 유티리티
+import threading
+import os
+
+# 파일복사
+path = './'
+
+def copy_test(partial_works):  # 복사
+    for w in partial_works:
+        file_list = os.listdir(path)
+        file_list_log = [file for file in file_list if file.startswith("o")]
+        c = len(file_list_log)
+        shutil.copytree('test7GB', 'testclone{0}'.format(c))
+
+works = range(10)  # 10번 0부터 9까지
+thread_count = 10
+threads = []
+
+if __name__ == "__main__":
+    print('start !')
+    start_time = time.time()
+    copy_test(range(1))
+
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
