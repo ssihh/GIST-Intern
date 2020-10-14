@@ -6,4 +6,4 @@
 : https://code.tutsplus.com/ko/tutorials/file-and-directory-operations-using-python--cms-25817
 
 파일리스트
-:https://minstar0410.tistory.com/18
+: https://minstar0410.tistory.com/18
