@@ -1,0 +1,32 @@
+import time
+import shutil  # 셸 유티리티
+from concurrent.futures import ThreadPoolExecutor
+import os
+
+# 파일복사
+path = './test7GB/'
+files = os.listdir(path)  # listdir() 해당 경로의 파일을 리스트로 반환
+
+
+def copy_test(partial_works):  # 복사
+    for w in partial_works:
+        shutil.copy(path + files[w], './testclone/' + files[w])
+
+
+list = []
+for i in range(10):
+    list.append(range(i*20, (i + 1)*20)) #숫자가 커지면 끝나지를 않음....
+    #list.append(range(i * 230, (i + 1) * 230))
+
+
+def do_thread_crawl(cplist):
+    with ThreadPoolExecutor(max_workers=8) as e:
+        for rg in cplist:
+            e.submit(copy_test, rg)
+
+if __name__ == "__main__":
+    start_time = time.time()
+    for i in list:
+        do_thread_crawl(list)
+
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
