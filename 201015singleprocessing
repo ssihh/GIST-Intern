@@ -1,0 +1,19 @@
+import time
+import shutil  # 셸 유티리티
+import threading
+import os
+
+# 파일복사
+path = './test7GB/'
+files = os.listdir(path)  # listdir() 해당 경로의 파일을 리스트로 반환
+
+
+def copy_test(partial_works):  # 복사
+    for w in partial_works:
+        shutil.copy(path + files[w], './testclone/' + files[w])
+
+#싱글 프로세싱
+if __name__ == "__main__":
+    start_time = time.time()
+    copy_test(range(2300))  #2300장 복사
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
