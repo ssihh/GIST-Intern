@@ -15,6 +15,6 @@ Pool 멀티프로세싱
 : https://niceman.tistory.com/145
 
 #cpu 개수
-import multiprocessing
+import multiprocessing \n
 num_cores = multiprocessing.cpu_count() # 12
 print(num_cores)
