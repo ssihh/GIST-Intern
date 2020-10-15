@@ -16,5 +16,5 @@ Pool 멀티프로세싱
 
 #### - cpu 개수 확인 코드  
 import multiprocessing  
-num_cores = multiprocessing.cpu_count() # 12  
-print(num_cores)
+num_cores = multiprocessing.cpu_count()  
+print(num_cores) # 8
