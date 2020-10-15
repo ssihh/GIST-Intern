@@ -7,3 +7,7 @@
 
 파일리스트
 : https://minstar0410.tistory.com/18
+
+파이썬 GIL 정책 멀티프로세싱
+: https://monkey3199.github.io/develop/python/2018/12/04/python-pararrel.html
+
