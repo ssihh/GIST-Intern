@@ -11,3 +11,5 @@
 파이썬 GIL 정책 멀티프로세싱
 : https://monkey3199.github.io/develop/python/2018/12/04/python-pararrel.html
 
+Pool 멀티프로세싱
+: https://niceman.tistory.com/145
