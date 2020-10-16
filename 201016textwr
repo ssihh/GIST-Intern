@@ -9,11 +9,16 @@ while True:
     c += 1
     if not line: break
     #print(split)
-
+f.close()
 b = []
 for i in range(len(a)-1): #리스트 길이
     b.append(a[i][1])
 
-print(b.count('00'), b.count('01'), b.count('02'))
+nf = open("text2.txt", 'w')
+data = "count\n00: %d\n01: %d\n02: %d\nrow: %d" \
+       % (b.count('00'), b.count('01'), b.count('02'), len(a)-1)
+nf.write(data)
+nf.close()
 
-f.close()
+print(open("text2.txt", 'r').read())
+open("text2.txt", 'r').close()
