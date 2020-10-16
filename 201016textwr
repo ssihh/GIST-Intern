@@ -1,0 +1,19 @@
+f = open('text1.txt', 'r+')
+
+c = 0
+a = []
+while True:
+    line = f.readline()
+    split = line.split(',')
+    a.append(split) #리스트 추가
+    c += 1
+    if not line: break
+    #print(split)
+
+b = []
+for i in range(len(a)-1): #리스트 길이
+    b.append(a[i][1])
+
+print(b.count('00'), b.count('01'), b.count('02'))
+
+f.close()
