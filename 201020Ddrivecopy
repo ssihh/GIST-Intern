@@ -1,0 +1,38 @@
+import time
+import shutil  # 셸 유티리티
+import threading
+import os
+import multiprocessing
+from functools import partial
+from itertools import repeat
+from itertools import product
+
+# 파일복사
+
+clone = './Police_hand_Ver1/'
+def copy_test(partial_works, path, files):  # 복사
+    for w in partial_works:
+        if w >= len(files):
+            print('{0} Filelist w is Empty'.format(w))
+            break
+        shutil.copy(path+files[w], clone+files[w])
+
+list = []
+for i in range(5): #범위수정가능
+    list.append(range(i * 100, (i + 1) * 100))
+
+#멀티프로세싱(Pool)
+if __name__ == "__main__":
+    start_time = time.time()
+    ppath = './1차가공납품_Policehand/Police_hand/img/edited/static/02/1/' #주소수정가능
+    folist = os.listdir(ppath)
+    for fl in folist:
+        path1 = './1차가공납품_Policehand/Police_hand/img/edited/static/02/1/%s/' % fl  #주소수정가능
+        files1 = os.listdir(path1)  # listdir() 해당 경로의 파일을 리스트로 반환
+        pool = multiprocessing.Pool(processes=5)
+        pool.starmap(copy_test, zip(list, repeat(path1), repeat(files1)))
+        pool.close()
+        pool.join()
+        print('fin : %s' % fl)
+
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
