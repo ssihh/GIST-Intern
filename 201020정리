@@ -1,0 +1,33 @@
+10.20
+주소 --> 누적개수
+ver1
+D:\1차가공납품_Policehand\Police_hand\img\edited\static\01\1 --> 8531개
+D:\1차가공납품_Policehand\Police_hand\img\edited\static\02\1 --> 14345개
+D:\1차가공납품_Policehand\Police_hand\img\edited\static\03\1 --> 20240개
+D:\1차가공납품_Policehand\Police_hand\img\edited\static\04\1 --> 26085개
+D:\1차가공납품_Policehand\Police_hand\img\edited\static\05\1 --> 35365개
+총 35365개 파일 중, 1개의 파일은 Thumbs / Data Base File 임
+즉, 이미지 파일은 총 35364개.
+
+ver2
+D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\01\1 --> 8530개
+D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\02\1 -->14344 개
+D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\03\1 --> 20239개
+D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\04\1 --> 26084개
+D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\05\1 --> 35364개
+
+
+1. 자율주행 데이터 종류
+- 객체 인식(카메라 이미지 영상)
+=> 2D or 3D bounding box, Semantic segmentation, Polygon
+
+- 도로 주행 데이터(LiDAR, RADAR, GPS 정보, IMU 데이터, 차량 주행 상태)
+
+- 도로 노면(차선인식 등)
+- LiDAR 데이터(차량 주위의 Map, HDMap)
+- 
+2. 데이터 셋 수량(정량적 항목)
+
+3. 센서 파라미터 제공?(FOV, 조리개 값, 화각 등)
+
+4. 수집 차량의 센서 세팅?
