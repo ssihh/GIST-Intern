@@ -16,6 +16,9 @@ D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\03\1 --> 20
 D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\04\1 --> 26084개
 D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\05\1 --> 35364개
 
+다운받은 파일로 채우기
+Ver1 다시만들깅~~
+
 
 1. 자율주행 데이터 종류
 - 객체 인식(카메라 이미지 영상)
@@ -31,3 +34,5 @@ D:\1차가공납품_Policehand\Police_hand\Labels(txt)\edited\static\05\1 --> 35
 3. 센서 파라미터 제공?(FOV, 조리개 값, 화각 등)
 
 4. 수집 차량의 센서 세팅?
+
+이거 마저 읽고 하기...
