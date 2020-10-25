@@ -4,6 +4,10 @@
 ####  - MP: MultiProcess / TP: ThreadProcess
 
 ### 참고링크
+
+병렬처리(Multiprocessing)를 통한 연산속도 개선
+:https://yganalyst.github.io/data_handling/memo_17_parallel/
+
 인공지능데이터셋구축  
 :https://aihub.or.kr/sample/intro/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B%20%EA%B5%AC%EC%B6%95%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_2%EC%87%84.pdf
 
