@@ -11,6 +11,7 @@ new_Dir = './YOLO/'
 label_path_list = []
 
 def trainset(Label_train):
+    print("value %s is in PID : %s" % (Label_train[0], os.getpid()))
     for file in Label_train:
         shutil.copy(file, new_Dir + "train/" + file.split("/")[-1])
         shutil.copy(file.split("txt")[0] + "img" + file.split("txt")[1] + "jpg",
@@ -54,53 +55,9 @@ Label_test_02 = Label_test[int(len(Label_test) / 4):2 * int(len(Label_test) / 4)
 Label_test_03 = Label_test[2 * int(len(Label_test) / 4):3 * int(len(Label_test) / 4)]
 Label_test_04 = Label_test[3 * int(len(Label_test) / 4):]
 
-original_Dir1 = './Police_hand_YOLO/txt/200518_DC_0001_OG_SG_01_1/'
-new_Dir1 = './YOLO/train/'
-filelist = os.listdir(original_Dir1)
-
-def traintest(part):
-    for file in part:
-        shutil.copy(original_Dir1 + files[w], new_Dir1 + files[w])
-
-list = []
-for i in range(10):
-    list.append(range(i * 10, (i + 1) * 10))
 
 if __name__ == "__main__":
-    pool = multiprocessing.Pool(processes=5)
-    pool.map(traintest, list)
+    pool = multiprocessing.Pool(processes=4)
+    pool.map(traintest, Label_train_multi)
     pool.close()
     pool.join()
-
-#########################################################################################################
-
-original_Dir1 = './Police_hand_YOLO/txt/200518_DC_0001_OG_SG_01_1/'
-new_Dir1 = './YOLO/train/'
-filelist = os.listdir(original_Dir1)
-
-def traintest(partial_works):
-    for w in partial_works:
-        shutil.copy(original_Dir1 + filelist[w], new_Dir1 + filelist[w])
-
-
-def trainset(Label_train):
-    for file in Label_train:
-        shutil.copy(file, new_Dir + "train/" + file.split("/")[-1]) # [-1] 파일명
-        shutil.copy(file.split("txt")[0] + "img" + file.split("txt")[1] + "jpg",
-                    new_Dir + "train/" + file.split("/")[-1].split(".")[0] + ".jpg")
-
-list = []
-for i in range(10):
-    list.append(range(i * 10, (i + 1) * 10))
-
-if __name__ == "__main__":
-    start_time = time.time()
-    for i in filelist[0:5]:
-        print(i)
-    pool = multiprocessing.Pool(processes=8)
-    pool.map(traintest, list)
-    pool.close()
-    pool.join()
-
-    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
-
