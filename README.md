@@ -5,7 +5,7 @@
 
 ### 참고링크
 
-병렬처리(Multiprocessing)를 통한 연산속도 개선
+병렬처리(Multiprocessing)를 통한 연산속도 개선  
 : https://yganalyst.github.io/data_handling/memo_17_parallel/
 
 인공지능데이터셋구축  
