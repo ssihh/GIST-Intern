@@ -33,4 +33,5 @@ if __name__ == "__main__":
     pool.close()
     pool.join()
 
-    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time)) 
+    # 4625초 = 1시간 17분 소요 / 79670파일(txt 기준, 1kb) 근데 또 403개 0byte ...
