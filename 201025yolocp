@@ -52,3 +52,5 @@ if __name__ == "__main__":
     pool.map(traintest, Label_train_multi)
     pool.close()
     pool.join()
+    
+   #약 31000초 = 8시간 40분 소요
