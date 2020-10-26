@@ -11,13 +11,7 @@ new_Dir = './YOLO/'
 label_path_list = []
 
 def trainset(Label_train):
-    print("value %s is in PID : %s" % (Label_train[0], os.getpid()))
-    for file in Label_train:
-        shutil.copy(file, new_Dir + "train/" + file.split("/")[-1])
-        shutil.copy(file.split("txt")[0] + "img" + file.split("txt")[1] + "jpg",
-                    new_Dir + "train/" + file.split("/")[-1].split(".")[0] + ".jpg")
-
-def trainset(Label_train):
+    print("value %s is in PID : %s" % (Label_train[0], os.getpid())) #프로세스 아이디 
     for file in Label_train:
         shutil.copy(file, new_Dir + "train/" + file.split("/")[-1])
         shutil.copy(file.split("txt")[0] + "img" + file.split("txt")[1] + "jpg",
@@ -40,9 +34,6 @@ random.shuffle(label_path_list)
 
 Label_train = label_path_list[:int(len(label_path_list) * 0.8)]
 Label_test = label_path_list[int(len(label_path_list) * 0.8):]
-
-i = 0
-j = 0
 
 Label_train_01 = Label_train[:int(len(Label_train) / 4)]
 Label_train_02 = Label_train[int(len(Label_train) / 4):2 * int(len(Label_train) / 4)]
