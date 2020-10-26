@@ -1,0 +1,36 @@
+import time
+import shutil  # 셸 유티리티
+import os
+import multiprocessing
+import random
+
+original_Dir = './images/'
+new_Dir = './labels/'
+label_path_list = []
+
+def textset(Label_train):
+    print("value %s is in PID : %s" % (Label_train[0], os.getpid()))
+    for file in Label_train:
+        shutil.move(original_Dir + file, new_Dir + file)
+
+for (path, dir, files) in os.walk(original_Dir):
+    for filename in files:
+        extension = os.path.splitext(filename)[-1]
+        if extension == '.txt':
+            label_path_list.append(filename)
+
+label_path_list1 = label_path_list[:int(len(label_path_list) / 4)]
+label_path_list2 = label_path_list[int(len(label_path_list) / 4):2 * int(len(label_path_list) / 4)]
+label_path_list3 = label_path_list[2 * int(len(label_path_list) / 4):3 * int(len(label_path_list) / 4)]
+label_path_list4 = label_path_list[3 * int(len(label_path_list) / 4):]
+label_path_multi = [label_path_list1, label_path_list2, label_path_list3, label_path_list4]
+
+if __name__ == "__main__":
+    start_time = time.time()
+    # print(label_path_list[0:5])
+    pool = multiprocessing.Pool(processes=4)
+    pool.map(textset, label_path_multi)
+    pool.close()
+    pool.join()
+
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
