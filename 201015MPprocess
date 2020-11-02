@@ -1,15 +1,18 @@
 import time
 import shutil  # 셸 유티리티
-from multiprocessing import Process
 import os
+from multiprocessing import Process
 
 # 파일복사
-path = './test7GB/'
+path = './test5.66GB/'
 files = os.listdir(path)  # listdir() 해당 경로의 파일을 리스트로 반환
 
+
 def copy_test(partial_works):  # 복사
+    print("value %s is in PID : %s" % (partial_works[0], os.getpid()))  # 프로세스 아이디
     for w in partial_works:
         shutil.copy(path + files[w], './testclone/' + files[w])
+
 
 list = []
 for i in range(0, 10, 2):
@@ -18,11 +21,11 @@ procs = []
 
 if __name__ == "__main__":
     start_time = time.time()
+    # 멀티 프로세스 - process
     for i in list:
         proc = Process(target=copy_test, args=(i,))
         procs.append(proc)
         proc.start()
     for proc in procs:
         proc.join()
-
     print("--- elapsed time %s seconds ---" % (time.time() - start_time))
