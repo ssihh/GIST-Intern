@@ -1,30 +1,29 @@
 import time
 import shutil  # 셸 유티리티
-import threading
 import os
+import threading
 
-# 파일복사
-path = './test7GB/'
+path = './test7GB/'  # 경로 설정
 files = os.listdir(path)  # listdir() 해당 경로의 파일을 리스트로 반환
 
 
-def copy_test(partial_works):  # 복사
+def copy_test(partial_works):  # 파일 복사 함수
     for w in partial_works:
         shutil.copy(path + files[w], './testclone/' + files[w])
 
 
+# 스레드 개수와 스레드 리스트
 thread_count = 10
 threads = []
 
 if __name__ == "__main__":
     start_time = time.time()
-    # print('상위 5개 파일 출력 : ', files[0:5]) #파일리스트 출력
-
+    # 새로운 스레드 생성/실행 후 스레드 리스트에 추가
     for i in range(thread_count):
         thread = threading.Thread(target=copy_test, args=(range(i * 230, (i + 1) * 230),), )
         thread.start()
         threads.append(thread)
+    # 메인 스레드는 각 스레드의 직업이 모두 끝날 때 까지 대기
     for thread in threads:
         thread.join()
-
     print("--- elapsed time %s seconds ---" % (time.time() - start_time))
