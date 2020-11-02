@@ -5,6 +5,9 @@
 
 ### 참고링크
 
+프로세스와 스레드 차이  
+: https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html
+
 병렬처리(Multiprocessing)를 통한 연산속도 개선  
 : https://yganalyst.github.io/data_handling/memo_17_parallel/
 
