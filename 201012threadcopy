@@ -20,8 +20,8 @@ if __name__ == "__main__":
     start_time = time.time()
     # print('상위 5개 파일 출력 : ', files[0:5]) #파일리스트 출력
 
-    for i in range(0, 10, 2):
-        thread = threading.Thread(target=copy_test, args=(range(i * 230, (i + 2) * 230),), )
+    for i in range(thread_count):
+        thread = threading.Thread(target=copy_test, args=(range(i * 230, (i + 1) * 230),), )
         thread.start()
         threads.append(thread)
     for thread in threads:
