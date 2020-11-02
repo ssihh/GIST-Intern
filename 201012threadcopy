@@ -1,33 +1,30 @@
 import time
-import shutil #셸 유티리티
+import shutil  # 셸 유티리티
 import threading
 import os
 
-#파일복사
-path = './dsttest/'
+# 파일복사
+path = './test7GB/'
+files = os.listdir(path)  # listdir() 해당 경로의 파일을 리스트로 반환
 
-def copy_test(partial_works):
-    for work in partial_works:
-        file_list = os.listdir(path)
-        file_list_log = [file for file in file_list if file.startswith("o")]
-        c = len(file_list_log)
-        shutil.copy('./dsttest/out.png', './dsttest/out{0}.png'.format(c))
 
-works = [x for x in range(1000)]
+def copy_test(partial_works):  # 복사
+    for w in partial_works:
+        shutil.copy(path + files[w], './testclone/' + files[w])
+
+
 thread_count = 10
 threads = []
 
 if __name__ == "__main__":
     start_time = time.time()
-    
-    for i in range(thread_count):
-        thread = threading.Thread(target=copy_test, args=(works[i * 100 : (i + 1) * 100],),)
+    # print('상위 5개 파일 출력 : ', files[0:5]) #파일리스트 출력
+
+    for i in range(0, 10, 2):
+        thread = threading.Thread(target=copy_test, args=(range(i * 230, (i + 2) * 230),), )
         thread.start()
         threads.append(thread)
     for thread in threads:
         thread.join()
-
-    for i in range(1000):
-        copy_test()
 
     print("--- elapsed time %s seconds ---" % (time.time() - start_time))
