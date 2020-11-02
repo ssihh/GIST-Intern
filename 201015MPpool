@@ -23,7 +23,7 @@ for i in range(10):
 if __name__ == "__main__":
     start_time = time.time()
     # 멀티프로세싱(Pool)
-    pool = multiprocessing.Pool(processes=8)
+    pool = multiprocessing.Pool(processes=5)
     pool.map(copy_test, list)
     pool.close()
     pool.join()
