@@ -24,7 +24,7 @@ if __name__ == "__main__":
         path1 = ppath + '%s/' % fl
         files1 = os.listdir(path1)  # listdir() 해당 경로의 파일을 리스트로 반환
         copy_test(range(0, len(files1)), files1)
-        print(' sum : %d' % count)
+        print('sum : %d' % count)
     print("---  %s  ---" % ppath)
-    print(' count : %d' % fc)
+    print('count : %d' % fc)
     print('Total : %d ' % count)
