@@ -1,0 +1,31 @@
+import time
+import os
+import multiprocessing
+from itertools import repeat
+
+# 파일카운팅
+count = 0
+
+def copy_test(partial_works, files):  # 복사
+    global count
+    for w in partial_works:
+        if w == (len(files)-1):
+            print('{0} Filelist w is Empty'.format(w+1))
+            count += w
+
+
+#멀티프로세싱(Pool)
+if __name__ == "__main__":
+    start_time = time.time()
+    ppath = './201022policehand압축푼거/img/edited/static/01/1/'
+    folist = os.listdir(ppath)
+    for fl in folist:
+        path1 = ppath + '%s/' % fl
+        files1 = os.listdir(path1)  # listdir() 해당 경로의 파일을 리스트로 반환
+        pool = multiprocessing.Pool(processes=4)
+        pool.starmap(copy_test, zip([range(0, len(files1))], repeat(files1)))
+        pool.close()
+        pool.join()
+        print(' sum : %d' % count)
+    print('Total : %d ' % count)
+    print("--- elapsed time %s seconds ---" % (time.time() - start_time))
