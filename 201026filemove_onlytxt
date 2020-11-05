@@ -1,3 +1,5 @@
+# img, txt 파일이 한군데 모여있는 폴더에서 txt파일만 옮기기 !!
+
 import time
 import shutil  # 셸 유티리티
 import os
