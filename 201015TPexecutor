@@ -1,3 +1,5 @@
+# 잘안됨... 중간에 끊김 ㅠ
+
 import time
 import shutil  # 셸 유티리티
 from concurrent.futures import ThreadPoolExecutor
