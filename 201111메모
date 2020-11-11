@@ -1,0 +1,62 @@
+현재 대다수 데이터 과제들이 1)영상 수집 2) 라벨링 등의 2단계 작업을 하고 있습니다.
+근데 가장 앞선 테슬라는 데이터 수집과 라벨링이 간단한 2단계로 이루어지지 않습니다.
+
+테슬라의 데이터 수집 전략은 2단계는 기본이고, 
+그 후 closed loop 형태로 아래와 같은 무한 싸이클을 합니다.
+detect anomalies -> regather similar images -> train -> shadow deployment -> full deployment
+
+싼타페가 수집 영상을 연구실 데이터 서버에 쏴주는 일은 불가하지만 
+이 부분은 차고에 왔을떄 와이파이로 올려준다고 한다면 
+우리도 위와 같은 프로세스를 확립하여 그 과정을 3차년도에 시연하고 싶습니다.
+
+1. 지휘봉에 의한 stop/go signal이 가능한 detector가 작동하는 싼타페가 운행을 한다.
+
+2. 8개의 카메라에서 들어오는 영상을 detector가 관찰을 한다.
+- ① 산타페에 검출기를 작동시킨 상태에서 운행을 하다 특정 객체를 인지하면 
+GMSL Camera 작동, 검출기와 연결
+Framework 파악 --> GMSL Camera × 11개 --> YOLO Detector --> Result
+
+3. detector가 감지를 하는데 credibility가 낮은 경우는 NAS에 flag를 걸어 영상을 저장한다.
+- ② 해당 영상분을 나스에 저장하도록 한 후 
+Nas에 저장, Nas mount 하는 법
+영상 동시 저장. 영상 확장자(h254. mp4), 용량 --> Mb/s
+
+4. 차고에 들어온다.
+
+5. NAS에 저장된 모든 (flagged/unflagged) 영상을 서버에 올린다.
+- ③ 운행이 종료된후 저장된 영상을 연구실 서버에 올리는 작업을 하였으면 합니다.
+(서버에는 time series data(시계열)에 특화된 NoSQL 디비인 Hadoop을 썼으면 함)
+Hadoop, 서버, Tesla
+
+6. 서버에 올라온 flagged 영상을 관리자가 평가하여 credibility가 낮은데 
+stop/go sign인것으로 파단되는 것은 red flag로 올린다
+
+7. 서버에서 red flag가 올라간 영상과 유사한 영상을 검색하여 이들 모두를 새로 라벨링 한다. 
+----> 이부분이 좀 어려울 것 같음
+
+8. stop/go detector를 red flag가 올라간 영상과 유사 영상을 포함하여 다시 학습한다.
+
+9 디텍터를 싼타페에 설치한다.
+
+10 디텍터는 shadow mode로 작동을 한다.
+
+11 shadow mode 검출이 만족한다면 full deployed mode로 promote 한다.
+
+■ 차량 센서 제어
+  - 카메라 제어
+  - Lidar, Radar, GPS 제어
+■ Detector 탑재
+  - 객체 검출
+  - 수신호(지시봉) 신호 인식
+■ 데이터 저장 구조
+  - Nas에 저장
+  - credibility flag 추가
+■ 서버에 업로드
+  - red flag 분류
+  - Hadoop 활용
+
+12일(목) 할일..
+- 하둡 깨부시기 술술 말할 수 있을 정도로 , NoSQL도..
+- 필요성 적기 테슬라 조사...
+- 4단계 보충
+- 각 단계 해석하기 영단어라던가..
