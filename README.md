@@ -5,7 +5,7 @@
 
 ### 참고링크
 
-NoSQL 배경
+NoSQL 배경  
 : https://kin.naver.com/qna/detail.nhn?d1id=1&dirId=10205&docId=345252384&qb=bm9zcWwgaGFkb29w&enc=utf8&section=kin.ext&rank=1&search_sort=0&spq=0
 
 프로세스와 스레드 차이  
