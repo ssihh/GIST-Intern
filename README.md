@@ -4,6 +4,8 @@
 ####  - MP: MultiProcess / TP: ThreadProcess
 
 ### 참고링크
+remove jdk
+:https://daddyprogrammer.org/post/2062/openjdk-install-update-delete/
 
 hadoop setting
 :https://truman.tistory.com/207
