@@ -5,6 +5,10 @@
 
 ### 참고링크
 
+ubuntu java setting
+:https://all-record.tistory.com/181
+
+
 프로세스 계획서 양식  
 : http://www.swbank.kr/html/pdf/sample/project_plan_guide.pdf
 
