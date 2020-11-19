@@ -4,6 +4,10 @@
 ####  - MP: MultiProcess / TP: ThreadProcess
 
 ### 참고링크
+
+하둡 프레임워크에서 각 서버와 통신을 도와줄 protocol buffer를 설치
+:https://velog.io/@guru_14/하둡-에코시스템을-만들어보자하둡-설치-1
+
 remove jdk
 :https://daddyprogrammer.org/post/2062/openjdk-install-update-delete/
 
