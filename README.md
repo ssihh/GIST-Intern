@@ -5,6 +5,9 @@
 
 ### 참고링크
 
+hadoop setting
+:https://truman.tistory.com/207
+
 ubuntu oracle java setting
 :https://cishome.tistory.com/122
 
