@@ -5,6 +5,9 @@
 
 ### 참고링크
 
+ubuntu oracle java setting
+:https://cishome.tistory.com/122
+
 ubuntu java setting
 :https://all-record.tistory.com/181
 
