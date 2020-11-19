@@ -1,1 +1,4 @@
-sudo apt-get install build-essential
+sudo apt-get install build-essentia
+
+sudo ldconfig
+protoc --version
