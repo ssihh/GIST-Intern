@@ -1,4 +1,9 @@
+2.
+su -
+
+18.
 sudo apt-get install build-essentia
 
+19.
 sudo ldconfig
 protoc --version
