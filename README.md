@@ -5,6 +5,9 @@
 
 ### 참고링크
 
+root 
+:https://starseeker711.tistory.com/176
+
 check ip 
 :https://hand-over.tistory.com/45
 
