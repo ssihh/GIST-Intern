@@ -5,6 +5,9 @@
 
 ### 참고링크
 
+check ip 
+:https://hand-over.tistory.com/45
+
 hadoop 2.7.2 download
 :https://jyoondev.tistory.com/62
 
