@@ -12,4 +12,8 @@ protoc --version
 bash
 
 34.
+1)
 ip addr
+sudo apt-get install net-tools
+ifconfig
+sudo apt-get install openssh-server
