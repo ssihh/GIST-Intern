@@ -5,7 +5,10 @@
 
 ### 참고링크
 
-w!
+ssh hadoop@hostname
+https://qastack.kr/ubuntu/403936/ssh-connect-to-host-localhost-port-22-connection-refused
+
+w! save
 :https://m.blog.naver.com/cgidhtml/130078377804
 
 root 
