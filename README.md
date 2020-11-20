@@ -5,11 +5,11 @@
 
 ### 참고링크
 
-우분투 한글 입력 ㅠㅠ
-https://gabii.tistory.com/entry/Ubuntu-1804-LTS-%ED%95%9C%EA%B8%80-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%A4%EC%A0%95
+우분투 한글 입력 ㅠㅠ  
+:https://gabii.tistory.com/entry/Ubuntu-1804-LTS-%ED%95%9C%EA%B8%80-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%A4%EC%A0%95
 
-ssh hadoop@hostname
-https://qastack.kr/ubuntu/403936/ssh-connect-to-host-localhost-port-22-connection-refused
+ssh hadoop@hostname  
+:https://qastack.kr/ubuntu/403936/ssh-connect-to-host-localhost-port-22-connection-refused
 
 vi 강제저장 w! save
 :https://m.blog.naver.com/cgidhtml/130078377804
