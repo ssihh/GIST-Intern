@@ -10,3 +10,6 @@ protoc --version
 
 33.
 bash
+
+34.
+ip addr
