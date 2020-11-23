@@ -5,6 +5,10 @@
 
 ### 참고링크
 
+하둡 설치 및 실행
+:https://www.youtube.com/watch?v=KDC2Nto4NfE&t=1602s
+
+
 데몬 뜻
 :https://rrhh234cm.tistory.com/194
 
