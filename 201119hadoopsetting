@@ -51,3 +51,12 @@ http://172.26.165.98:50030
 ls /home/hadoop/hadoop-2.7.2/etc/hadoop
 hdfs dfs -ls
 hdfs dfs -put ~/hadoop-2.7.2/etc/hadoop/hadoop-env.sh conf
+
+#시작하세요! 하둡 프로그래밍
+#426p - 얀을 위한 웹 인터페이스
+http://172.26.165.98:8088
+
+#428p 
+hadoop@hadoopserver:~/hadoop-2.7.2$ yarn jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.2.jar wordcount conf output
+hdfs dfs -ls
+hdfs dfs -cat output/part-r-00000 | tail -10
