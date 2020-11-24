@@ -36,8 +36,18 @@ jps 자바 프로그램을 쭉 보여주는 명령어
 4319 NameNode
 5가지 이 노드가 실행되어야함
 
-#하둡 웹 인터페이스 열기 (주소창)
+#하둡 웹 인터페이스 열기 : HDFS 웹인터페이스 (주소창)
 http://172.26.165.98:50070
-Live Node 개수 확인..
-#맵 리듀스스가 정상적으로 돌아가는지 확인하려면
-http://172.26.165.98:50030
+Live Node 개수 확인..데이터 노드 수 확인
+
+38:20
+슬레이브 노드 추가
+
+#맵 리듀스가 정상적으로 돌아가는지 확인하려면 : 맵리듀스 웹인터페이스
+http://172.26.165.98:50030 
+근데 안들어가지네
+
+# 하둡 예제 : https://jyoondev.tistory.com/64?category=825340
+ls /home/hadoop/hadoop-2.7.2/etc/hadoop
+hdfs dfs -ls
+hdfs dfs -put ~/hadoop-2.7.2/etc/hadoop/hadoop-env.sh conf
