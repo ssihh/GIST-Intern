@@ -57,7 +57,7 @@ hdfs dfs -put ~/hadoop-2.7.2/etc/hadoop/hadoop-env.sh conf
 http://172.26.165.98:8088
 
 #428p 
-hadoop@hadoopserver:~/hadoop-2.7.2$ yarn jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.2.jar wordcount conf output
+yarn jar ~/hadoop-2.7.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.2.jar wordcount conf output
 hdfs dfs -ls
 hdfs dfs -cat output/part-r-00000 | tail -10
 
