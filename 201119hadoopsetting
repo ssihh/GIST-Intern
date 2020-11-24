@@ -19,6 +19,25 @@ ifconfig
 sudo apt-get install openssh-server
 ssh hadoop@172.26.165.98 
 
+
+# 링크 : https://youtu.be/KDC2Nto4NfE
+
 vi /home/hadoop/.vimrc
 set nu
 set paste
+
+# 49:12
+start-all.sh  하둡 클러스터 시작
+jps 자바 프로그램을 쭉 보여주는 명령어
+4881 ResourceManager
+4514 DataNode #슬레이브 역할을 하는 DataNode
+5492 Jps
+5054 NodeManager
+4319 NameNode
+5가지 이 노드가 실행되어야함
+
+#하둡 웹 인터페이스 열기 (주소창)
+http://172.26.165.98:50070
+Live Node 개수 확인..
+#맵 리듀스스가 정상적으로 돌아가는지 확인하려면
+http://172.26.165.98:50030
