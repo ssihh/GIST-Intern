@@ -62,6 +62,7 @@ hdfs dfs -ls
 hdfs dfs -cat output/part-r-00000 | tail -10
 
 # 하둡 JobHistory 서버 접속 : 얀 클러스터에서 실행된 맵리듀스 잡의 이력만을 제공
+# 히스토리 매니저 웹 인터페이스 - 실행된 맵리듀스에 대한 결과는 히스토리 매니저가 관리합니다.
 #참고링크 : https://eyeballs.tistory.com/30
 mr-jobhistory-daemon.sh start historyserver
 jps
