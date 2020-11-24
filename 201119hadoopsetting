@@ -47,24 +47,28 @@ Live Node 개수 확인..데이터 노드 수 확인
 http://172.26.165.98:50030 
 근데 안들어가지네
 
-# 하둡 예제 : https://jyoondev.tistory.com/64?category=825340
-ls /home/hadoop/hadoop-2.7.2/etc/hadoop
-hdfs dfs -ls
-hdfs dfs -put ~/hadoop-2.7.2/etc/hadoop/hadoop-env.sh conf
+# 하둡 JobHistory 서버 접속 : 얀 클러스터에서 실행된 맵리듀스 잡의 이력만을 제공
+# 히스토리 매니저 웹 인터페이스 - 실행된 맵리듀스에 대한 결과는 히스토리 매니저가 관리합니다.
+# 참고링크 : https://eyeballs.tistory.com/30
+mr-jobhistory-daemon.sh start historyserver
+jps
+#목록에 JobHistoryServer 있는지 확인
+hadoopserver:19888 접속 가능!!! 
+
+yarn-daemon.sh start proxyserver
 
 #시작하세요! 하둡 프로그래밍
 #426p - 얀을 위한 웹 인터페이스
 http://172.26.165.98:8088
+
+# 하둡 예제 : https://jyoondev.tistory.com/64?category=825340
+ls /home/hadoop/hadoop-2.7.2/etc/hadoop
+hdfs dfs -ls
+hdfs dfs -put ~/hadoop-2.7.2/etc/hadoop/hadoop-env.sh conf
 
 #428p 
 yarn jar ~/hadoop-2.7.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.2.jar wordcount conf output
 hdfs dfs -ls
 hdfs dfs -cat output/part-r-00000 | tail -10
 
-# 하둡 JobHistory 서버 접속 : 얀 클러스터에서 실행된 맵리듀스 잡의 이력만을 제공
-# 히스토리 매니저 웹 인터페이스 - 실행된 맵리듀스에 대한 결과는 히스토리 매니저가 관리합니다.
-#참고링크 : https://eyeballs.tistory.com/30
-mr-jobhistory-daemon.sh start historyserver
-jps
-#목록에 JobHistoryServer 있는지 확인
-hadoopserver:19888 접속 가능!!! 
+
