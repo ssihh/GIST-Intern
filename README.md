@@ -5,6 +5,9 @@
 
 ### 참고링크
 
+Hive
+:https://archive.apache.org/dist/hive/hive-2.0.0/
+
 하둡 설치 및 실행
 :https://www.youtube.com/watch?v=KDC2Nto4NfE&t=1602s
 
