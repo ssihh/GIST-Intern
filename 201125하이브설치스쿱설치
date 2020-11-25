@@ -13,3 +13,7 @@ hdfs dfs -mkdir -p /user/hive/warehouse
 #참고링크 : https://jyoondev.tistory.com/68?category=825340
 
 hdfs dfs -chmod 777 /tmp/hive
+
+# 스쿱설치 
+cp /home/ksh/다운로드/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz /home/hadoop
+tar xvfz sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
