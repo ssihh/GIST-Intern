@@ -5,7 +5,7 @@
 
 ### 참고링크
 
-Hive
+Hive 다운링크
 :https://archive.apache.org/dist/hive/hive-2.0.0/
 
 하둡 설치 및 실행
