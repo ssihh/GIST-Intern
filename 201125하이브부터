@@ -1,0 +1,5 @@
+참고링크 : https://truman.tistory.com/209?category=869343
+
+su - hadoop
+cp /home/ksh/다운로드/apache-hive-2.0.0-bin.tar.gz /home/hadoop
+tar xvzf apache-hive-2.0.0-bin.tar.gz
