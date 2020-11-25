@@ -5,6 +5,9 @@
 
 ### 참고링크
 
+Sqoop 스쿱 다운링크
+:http://mirror.apache-kr.org/apache/sqoop/1.4.7/
+
 Hive 다운링크
 :https://archive.apache.org/dist/hive/hive-2.0.0/
 
