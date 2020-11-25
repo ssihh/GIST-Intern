@@ -1,4 +1,4 @@
-참고링크 : https://truman.tistory.com/209?category=869343
+#참고링크 : https://truman.tistory.com/209?category=869343
 
 1.
 su - hadoop
@@ -9,3 +9,7 @@ tar xvzf apache-hive-2.0.0-bin.tar.gz
 start-dfs.sh #dfs를 시작해야 -mkdir 가능
 start-yarn.sh
 hdfs dfs -mkdir -p /user/hive/warehouse
+
+#참고링크 : https://jyoondev.tistory.com/68?category=825340
+
+hdfs dfs -chmod 777 /tmp/hive
