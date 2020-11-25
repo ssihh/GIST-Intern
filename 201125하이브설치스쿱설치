@@ -17,3 +17,18 @@ hdfs dfs -chmod 777 /tmp/hive
 # 스쿱설치 
 cp /home/ksh/다운로드/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz /home/hadoop
 tar xvfz sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
+
+#참고링크 : https://hhgg.tistory.com/6
+cd sqoop-1.4.7.bin__hadoop-2.6.0
+bin/sqoop help
+cp sqoop/conf/sqoop-env-template.sh sqoop/conf/sqoop-env.sh
+vi sqoop/conf/sqoop-env.sh
+  export HADOOP_COMMON_HOME=/home/doop/hadoop-2.7.2
+  export HADOOP_MAPRED_HOME=/home/doop/hadoop-2.7.2
+cd sqoop-1.4.7.bin__hadoop-2.6.0/
+./bin/sqoop 
+#이때 나오는 경고 메세지는 하이브 연동을 위한 HCatalog, 어큐물로 및 H베이스 연동을 위한 주키퍼 경로가 설정되어있지 않다는 메시지입니다.
+#스쿱은 하둡 경로만 설정돼 있으면 기본 기능은 수행할 수 있습니다.
+
+./bin/sqoop help
+./bin/sqoop help import
