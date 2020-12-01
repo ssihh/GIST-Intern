@@ -11,6 +11,9 @@ sudo apt-get install build-essentia
 sudo ldconfig
 protoc --version
 
+28.
+cp /home/ksh/다운로드/hadoop-2.7.2.tar.gz /home/hadoop
+
 33.
 bash
 
