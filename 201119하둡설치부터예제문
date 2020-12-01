@@ -1,6 +1,9 @@
 2.
 su -
 
+8.
+cp /home/ksh/다운로드/jdk-8u271-linux-x64.tar.gz /usr/java
+
 18.
 sudo apt-get install build-essentia
 
