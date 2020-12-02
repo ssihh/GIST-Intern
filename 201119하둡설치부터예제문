@@ -25,6 +25,9 @@ ifconfig
 sudo apt-get install openssh-server
 ssh hadoop@172.26.165.98 
 
+34-5)
+ssh-copy-id -i /home/hadoop/.ssh/id_rsa.pub hadoop@172.26.165.98
+
 
 # 하둡 실행 링크 : https://youtu.be/KDC2Nto4NfE
 
@@ -48,6 +51,11 @@ Live Node 개수 확인..데이터 노드 수 확인
 
 #38:20
 슬레이브 노드 추가
+hadoop@hadoopserver:~/hadoop-2.7.2/etc/hadoop$ cat slaves
+172.26.165.98
+172.26.165.106
+172.26.165.107
+
 
 #43:34
 하둡 
