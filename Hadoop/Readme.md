@@ -1,4 +1,4 @@
-### 참고링크
+### Hadoop 참고링크
 
 Sqoop 스쿱 다운링크
 :http://mirror.apache-kr.org/apache/sqoop/1.4.7/
