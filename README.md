@@ -1,9 +1,5 @@
 # GIST-Intern
-2020.10~12 광주과학기술원 기계공학부 인턴 기간 중, 작성한 Python 코드
-
-####  - MP: MultiProcess / TP: ThreadProcess
-
-### 참고링크
+2020.10~12 광주과학기술원 기계공학부 인턴 기간 중, 작성한 코드
 
 Sqoop 스쿱 다운링크
 :http://mirror.apache-kr.org/apache/sqoop/1.4.7/
@@ -13,7 +9,6 @@ Hive 다운링크
 
 하둡 설치 및 실행
 :https://www.youtube.com/watch?v=KDC2Nto4NfE&t=1602s
-
 
 데몬 뜻
 :https://rrhh234cm.tistory.com/194
