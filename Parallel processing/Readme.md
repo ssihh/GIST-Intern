@@ -1,6 +1,6 @@
 ####  - MP: MultiProcess / TP: ThreadProcess
 
-### 참고링크
+### 병렬처리 참고링크
 
 프로세스와 스레드 차이  
 : https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html
