@@ -1,5 +1,4 @@
-####  - MP: MultiProcess / TP: ThreadProcess
-
+######  - MP: MultiProcess / TP: ThreadProcess
 ### 병렬처리 참고링크
 
 프로세스와 스레드 차이  
