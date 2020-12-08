@@ -1,6 +1,8 @@
 # GIST-Intern
 2020.10~12 광주과학기술원 기계공학부 인턴 기간 중, 작성한 코드
 
+### 참고링크
+
 Sqoop 스쿱 다운링크
 :http://mirror.apache-kr.org/apache/sqoop/1.4.7/
 
