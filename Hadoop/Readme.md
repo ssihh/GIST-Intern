@@ -2,7 +2,7 @@
 
 「하둡완벽가이드」예제
 :https://acet.pe.kr/499
-https://github.com/tomwhite/hadoop-book/
+, code&data :https://github.com/tomwhite/hadoop-book/
 
 「시작하세요!하둡프로그래밍」참고링크
 :https://fliphtml5.com/hkuy/nqky/basic/51-100
