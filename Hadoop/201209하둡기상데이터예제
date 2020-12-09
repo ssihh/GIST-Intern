@@ -26,4 +26,5 @@ mr-jobhistory-demon.sh stop historyserver
 # 프록시 서버가 실행되고 있지 않으면 웹 인터페이스에서 애플리케이션마스터 관련 페이지에 접근할 수 없습니다.
 yarn-demen.sh start proxysever
 
-# 기상 데이터 가져오기.. 58
+#「하둡완벽가이드」
+# 기상 데이터 가져오기.. 58p
