@@ -1,0 +1,15 @@
+#「시작하세요! 하둡 프로그래밍」
+# 하둡 실행, 하둡 관련 모든 데몬 실행 424p
+su - hadoop
+start-all.sh
+jps
+mr-jobhistory-demon.sh start historyserver
+
+# 모든 데몬 정지 ###### 정지할 때만 쓰기 ! ##
+stop-yarn.sh
+stop-dfs.sh
+# 혹은
+stop-all.sh
+#######################################
+
+# 425
