@@ -23,6 +23,17 @@ jps
 #맵리듀스 잡의 이력만 별도로 볼 수 있는 서버를 제공. 이 서버 실행문.
 mr-jobhistory-daemon.sh start historyserver
 
+#하둡2 웹 인터페이스
+HDFS 관리용 웹 인터페이스
+:http://hadoopserver:50070
+얀 웹 인터페이스
+:http://hadoopserver:8088/cluster
+히스토리 서버
+:http://hadoopserver:19888/jobhistory
+
+#웹 프록시 서버 실행
+#프록시 서버가 실행되고 있지 않으면 웹 인터페이스에서 애플리케이션 마스터 관련 페이제 접근할 수 없습니다.
+yarn-daemon.sh start proxyserver
 
 #모든 데몬 정지 ###### 정지할 때만 쓰기 ! #######
 stop-yarn.sh
@@ -33,14 +44,6 @@ stop-all.sh
 mr-jobhistory-daemon.sh stop historyserver
 ###########################################
 
-#하둡2 웹 인터페이스
-HDFS 관리용 웹 인터페이스
-:http://hadoopserver:50070
-얀 웹 인터페이스
-:http://hadoopserver:8088/cluster
-히스토리 서버
-:http://hadoopserver:19888/jobhistory
-
 # 웹 프록시 서버 실행 - 425p
 # 프록시 서버가 실행되고 있지 않으면 웹 인터페이스에서 애플리케이션마스터 관련 페이지에 접근할 수 없습니다.
 yarn-demen.sh start proxysever
@@ -50,3 +53,10 @@ yarn-demen.sh start proxysever
 # 1. https://github.com/tomwhite/hadoop-book/blob/master/input/ncdc/sample.txt
 # 2. --> Raw --> Ctrl + S 저장
 
+#HDFS에 저장되어있는 파일 확인
+hdfs dfs -ls
+
+cp /home/ksh/다운로드/sample.txt /home/hadoop
+ls
+hdfs dfs -put ~/sample.txt
+hdfs dfs -ls
