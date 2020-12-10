@@ -39,4 +39,5 @@ yarn-demen.sh start proxysever
 
 #「하둡완벽가이드」
 # 기상 데이터 가져오기.. 58p
-# https://github.com/tomwhite/hadoop-book/blob/master/input/ncdc/sample.txt --> Raw --> Ctrl + S 저장
+# 1. https://github.com/tomwhite/hadoop-book/blob/master/input/ncdc/sample.txt
+# 2. --> Raw --> Ctrl + S 저장
