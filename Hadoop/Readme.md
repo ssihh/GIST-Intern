@@ -1,5 +1,8 @@
 ### Hadoop 참고링크
 
+eclipse install
+:https://dynamide.tistory.com/21193
+
 하둡 이클립스 설치하랭...ppt랑있는거!
 :https://m.blog.naver.com/PostView.nhn?blogId=hanajava&logNo=220948382463&proxyReferer=https:%2F%2Fwww.google.com%2F
 
