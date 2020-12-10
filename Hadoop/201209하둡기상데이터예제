@@ -3,6 +3,8 @@
 #하둡 실행 - 424p
 su - hadoop
 
+#"하둡을 실행" 한다는 것은 네트워크상의 서로 다른 서버에서 여러 개의 데몬(demon)또는 상주 프로그램들을 실행하는 것을 뜻한다. 
+# 각 데몬은 특별한 기능들을 한다. 하둡은 다음과 같은 데몬들을 가지고있다.
 #하둡 관련 모든 데몬 실행
 #향후에는 start-all.sh 대신 start-dfs.sh와 start-yarn.sh를 순서대로 실행합니다.
 start-all.sh
@@ -14,12 +16,12 @@ start-yarn.sh
 #참고링크 :https://truman.tistory.com/207 
 #<34.공개키설정> 부분 참고
 
-
+#jps 는 java로 실행하고 있는 프로세스 목록을 보여주는 명령어.
 jps
 
 #하둡2는 얀을 위한 웹 인터페이스 외에도, 
 #맵리듀스 잡의 이력만 별도로 볼 수 있는 서버를 제공. 이 서버 실행문.
-mr-jobhistory-demon.sh start historyserver
+mr-jobhistory-daemon.sh start historyserver
 
 
 #모든 데몬 정지 ###### 정지할 때만 쓰기 ! ##
@@ -28,7 +30,7 @@ stop-dfs.sh
 #혹은
 stop-all.sh
 #히스토리 서버는 별도로 중지
-mr-jobhistory-demon.sh stop historyserver
+mr-jobhistory-daemon.sh stop historyserver
 #######################################
 
 # 웹 프록시 서버 실행 - 425p
