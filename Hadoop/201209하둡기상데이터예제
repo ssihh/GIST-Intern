@@ -24,14 +24,22 @@ jps
 mr-jobhistory-daemon.sh start historyserver
 
 
-#모든 데몬 정지 ###### 정지할 때만 쓰기 ! ##
+#모든 데몬 정지 ###### 정지할 때만 쓰기 ! #######
 stop-yarn.sh
 stop-dfs.sh
 #혹은
 stop-all.sh
 #히스토리 서버는 별도로 중지
 mr-jobhistory-daemon.sh stop historyserver
-#######################################
+###########################################
+
+#하둡2 웹 인터페이스
+HDFS 관리용 웹 인터페이스
+:http://hadoopserver:50070
+얀 웹 인터페이스
+:http://hadoopserver:8088/cluster
+히스토리 서버
+:http://hadoopserver:19888/jobhistory
 
 # 웹 프록시 서버 실행 - 425p
 # 프록시 서버가 실행되고 있지 않으면 웹 인터페이스에서 애플리케이션마스터 관련 페이지에 접근할 수 없습니다.
@@ -41,3 +49,4 @@ yarn-demen.sh start proxysever
 # 기상 데이터 가져오기.. 58p
 # 1. https://github.com/tomwhite/hadoop-book/blob/master/input/ncdc/sample.txt
 # 2. --> Raw --> Ctrl + S 저장
+
