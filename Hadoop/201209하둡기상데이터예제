@@ -6,6 +6,10 @@ su - hadoop
 #하둡 관련 모든 데몬 실행
 #향후에는 start-all.sh 대신 start-dfs.sh와 start-yarn.sh를 순서대로 실행합니다.
 start-all.sh
+#혹은
+start-dfs.sh
+start-yarn.sh
+#####################
 jps
 
 #하둡2는 얀을 위한 웹 인터페이스 외에도, 
