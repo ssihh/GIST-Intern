@@ -7,8 +7,8 @@ eclipse install
 :https://m.blog.naver.com/PostView.nhn?blogId=hanajava&logNo=220948382463&proxyReferer=https:%2F%2Fwww.google.com%2F
 
 「하둡완벽가이드」예제
-:https://acet.pe.kr/499
-https://invincibletyphoon.tistory.com/23
+:1, https://acet.pe.kr/499
+2, https://invincibletyphoon.tistory.com/23
 , code&data :https://github.com/tomwhite/hadoop-book/
 
 「시작하세요!하둡프로그래밍」참고링크
