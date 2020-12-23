@@ -56,3 +56,7 @@ cp /home/ksh/다운로드/sample.txt /home/hadoop
 ls
 hdfs dfs -put ~/sample.txt
 hdfs dfs -ls
+
+yarn jar '/home/hadoop/HadoopHello/MaxTemperature.jar' MaxTemperature sample.txt MaxTemperature
+hdfs dfs -ls
+hdfs dfs -cat MaxTemperature/part-r-00000
