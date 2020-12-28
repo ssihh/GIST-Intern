@@ -3,6 +3,8 @@
 우분투 pycharm 설치
 :1, wanochoi.com/?p=4643
 2, data-newbie.tistory.com/663
+wanochoi.com/?p=4643
+
 
 우분투 eclipse install
 :https://dynamide.tistory.com/21193
