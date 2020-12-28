@@ -1,6 +1,10 @@
 ### Hadoop 참고링크
 
-eclipse install
+우분투 pycharm 설치
+:1, wanochoi.com/?p=4643
+2, data-newbie.tistory.com/663
+
+우분투 eclipse install
 :https://dynamide.tistory.com/21193
 
 하둡 이클립스 설치하랭...ppt랑있는거!
