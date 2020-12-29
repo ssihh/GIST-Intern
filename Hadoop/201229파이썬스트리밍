@@ -1,0 +1,23 @@
+cat sample.txt | \
+max_temperature_map.py | \
+sort | max_temperature_reduce.py
+
+#참고링크 :https://www.edureka.co/community/591/error-running-hadoop-mapreduce-python-using-hadoop-streaming
+
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar \
+-input /user/cloudera/sample.txt \
+-output /user/cloudera/output
+-file max_temperature_map.py  -mapper /home/cloudera/streaming-sample/max_temperature_map.py \
+-file max_temperature_reduce.py  -reducer /home/cloudera/streaming-sample/max_temperature_reduce.py
+
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar \
+-input /user/hadoop/다운로드/sample.txt \
+-output streaming \
+-file max_temperature_map.py  -mapper /home/cloudera/streaming-sample/max_temperature_map.py \
+-file max_temperature_reduce.py  -reducer /home/cloudera/streaming-sample/max_temperature_reduce.py
+
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar \
+-input /home/hadoop/다운로드/sample.txt \
+-output streaming \
+-file max_temperature_map.py  -mapper /home/hadoop/다운로드/max_temperature_map.py \
+-file max_temperature_reduce.py  -reducer /home/hadoop/다운로드/max_temperature_reduce.py
